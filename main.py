@@ -33,13 +33,13 @@ def find_mismatch(text):
         print(brac.position)
 
     else:
-        print("Success!")
+        print("Success")
  
         
 def main():
     text = input()
     find_mismatch(text)
-
+    return
    
     
 
