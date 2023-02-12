@@ -37,12 +37,19 @@ def find_mismatch(text):
  
         
 def main():
-    text = input()
-    find_mismatch(text)
-    return
-   
-    
 
+    pick=input()
+
+    if(pick=="I"):
+        text = input()
+        find_mismatch(text)
+
+    if(pick=="F"):
+        filename=input()
+        file=open(filename,"r")
+        find_mismatch(file.read())
+
+   
 
 if __name__ == "__main__":
     main()
