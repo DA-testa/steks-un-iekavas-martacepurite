@@ -41,11 +41,11 @@ def main():
     text=input()
     t=input()
 
-    ##if(text.startswith("I")):
+    if(text=="I"):
         
-    find_mismatch(t)
+        find_mismatch(t)
     
-    if(text.startswith("F")):
+    if(text=="F"):
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
