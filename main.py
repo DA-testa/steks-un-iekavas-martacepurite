@@ -65,6 +65,9 @@ def main():
         file=open(spl.pop(),"r")
         find_mismatch(file.read())
 
+    else:
+        find_mismatch(text)
+
 
     # else:
     #     spl=text.split()
