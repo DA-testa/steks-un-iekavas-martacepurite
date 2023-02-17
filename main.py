@@ -39,17 +39,17 @@ def find_mismatch(text):
 def main():
 
     text=input()
+    t=input()
 
-    if(text.startswith("I")):
+    ##if(text.startswith("I")):
         
-        find_mismatch(text)
-
+    find_mismatch(t)
+    
     if(text.startswith("F")):
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
-    else:
-        find_mismatch(text)
+    
 
    
 
