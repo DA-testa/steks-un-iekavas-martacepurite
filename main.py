@@ -55,6 +55,7 @@ def main():
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
+        file.close()
     
     elif(text.startswith("I")):
         spl=text.split()
@@ -64,6 +65,7 @@ def main():
         spl=text.split()
         file=open(spl.pop(),"r")
         find_mismatch(file.read())
+        file.close()
 
     else:
         find_mismatch(text)
