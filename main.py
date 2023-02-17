@@ -48,6 +48,8 @@ def main():
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
+    else:
+        find_mismatch(text)
 
    
 
