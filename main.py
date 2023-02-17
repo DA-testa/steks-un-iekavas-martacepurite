@@ -39,16 +39,25 @@ def find_mismatch(text):
 def main():
 
     text=input()
-    t=input()
+    
 
-    if(text=="I"):
-        
-        find_mismatch(t)
+    ##print(text)
+
+    a,b=text.split()
+    
+
+    if(a=="I"):
+        ##t=input()
+        ##print(b)
+        find_mismatch(b)
     
     if(text=="F"):
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
+
+    
+
     
 
    
