@@ -38,13 +38,13 @@ def find_mismatch(text):
         
 def main():
 
-    pick=input()
+    text=input()
 
-    if(pick=="I"):
-        text = input()
+    if(text.startswith("I")):
+        
         find_mismatch(text)
 
-    if(pick=="F"):
+    if(text.startswith("F")):
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
