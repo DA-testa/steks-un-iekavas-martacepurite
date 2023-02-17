@@ -57,7 +57,7 @@ def main():
         find_mismatch(file.read())
 
     else:
-        spl=text.splitlines()
+        spl=text.split()
         if(len(spl)==2):
             b=spl.pop()
             a=spl.pop()
@@ -65,7 +65,9 @@ def main():
             if(a=="I"):
                 find_mismatch(b)
             if(a=="F"):
-                find_mismatch(b)
+                filename=input()
+                file=open(filename,"r")
+                find_mismatch(file.read())
 
         
     
