@@ -55,19 +55,28 @@ def main():
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
-
-    else:
+    
+    elif(text.startswith("I")):
         spl=text.split()
-        if(len(spl)==2):
-            b=spl.pop()
-            a=spl.pop()
+        find_mismatch(spl.pop())
+
+
+    # else:
+    #     spl=text.split()
+    #     ##print(spl)
+    #     if(len(spl)>=2):
+    #         b=spl.pop()
+    #         a=spl.pop()
+
+    #         ##print(a)
+    #         ##print(b)
             
-            if(a=="I"):
-                find_mismatch(b)
-            if(a=="F"):
-                filename=input()
-                file=open(filename,"r")
-                find_mismatch(file.read())
+    #         if(a=='I'):
+    #             find_mismatch(b)
+    #         if(a=='F'):
+    #             filename=input()
+    #             file=open(filename,"r")
+    #             find_mismatch(file.read())
 
         
     
