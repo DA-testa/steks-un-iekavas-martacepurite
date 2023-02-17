@@ -57,16 +57,17 @@ def main():
         find_mismatch(file.read())
 
     else:
-        spl=text.split()
+        spl=text.splitlines()
         if(len(spl)==2):
             b=spl.pop()
             a=spl.pop()
             
+            if(a=="I"):
+                find_mismatch(b)
+            if(a=="F"):
+                find_mismatch(b)
 
-        if(a=="I"):
-            find_mismatch(b)
-        if(a=="F"):
-            find_mismatch(b)
+        
     
     
 
