@@ -43,18 +43,32 @@ def main():
 
     ##print(text)
 
-    a,b=text.split()
+    
     
 
-    if(a=="I"):
-        ##t=input()
+    if(text=="I"):
+        t=input()
         ##print(b)
-        find_mismatch(b)
-    
-    if(text=="F"):
+        find_mismatch(t)
+
+    elif(text=="F"):
         filename=input()
         file=open(filename,"r")
         find_mismatch(file.read())
+
+    else:
+        spl=text.split()
+        if(len(spl)==2):
+            b=spl.pop()
+            a=spl.pop()
+            
+
+        if(a=="I"):
+            find_mismatch(b)
+        if(a=="F"):
+            find_mismatch(b)
+    
+    
 
     
 
