@@ -59,6 +59,11 @@ def main():
     elif(text.startswith("I")):
         spl=text.split()
         find_mismatch(spl.pop())
+    
+    elif(text.startswith("F")):
+        spl=text.split()
+        file=open(spl.pop(),"r")
+        find_mismatch(file.read())
 
 
     # else:
