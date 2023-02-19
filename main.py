@@ -40,13 +40,6 @@ def main():
 
     text=input()
     t=input()
-
-    # if(text.startswith("I")):
-    # ##if(text.startswith("I")):
-
-    #     find_mismatch(text)
-
-    # find_mismatch(t)
     
     if(text.startswith("F")):
         filename=input()
