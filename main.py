@@ -47,6 +47,10 @@ def main():
         t=input()
         ##print(b)
         find_mismatch(t)
+    
+    if(text.startswith("I")):
+        spl=text.split()
+        find_mismatch(spl.pop())
 
     # if(text=="F"):
     #     t=input()
