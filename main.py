@@ -1,5 +1,3 @@
-# python3
-
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
@@ -11,21 +9,44 @@ def are_matching(left, right):
 
 def find_mismatch(text):
     opening_brackets_stack = []
+    opening_brackets_stack.append(' ')
+
+
     for i, next in enumerate(text):
         if next in "([{":
-            # Process opening bracket, write your code here
-            pass
+            
+            bo=Bracket(next,i+1)
+            opening_brackets_stack.append(bo)
 
         if next in ")]}":
-            # Process closing bracket, write your code here
-            pass
+            last_op_br=opening_brackets_stack.pop()
+            br=last_op_br.char
+            if(are_matching(br,next)==False):
+                bc=Bracket(next,i+1)
+                
+                print(bc.position)
+                return
 
 
+    if(len(opening_brackets_stack)>1):
+        brac=opening_brackets_stack.pop()
+        print(brac.position)
+
+    else:
+        print("Success")
+ 
+        
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    # Printing answer, write your code here
 
+    text=input()
+    t=input()
+    
+    if(text.startswith("F")):
+        filename=input()
+        file=open(filename,"r")
+        find_mismatch(file.read())
+    else:
+        find_mismatch(t)
 
 if __name__ == "__main__":
     main()
