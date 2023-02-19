@@ -48,10 +48,10 @@ def main():
         ##print(b)
         find_mismatch(t)
 
-    if(text.startswith("F")):
-        spl=text.splitlines()
-        file=open(spl.pop,"r")
+    if(text=="F"):
+        t=input()
+        file=open(t,"r")
         find_mismatch(file)
-
+        
 if __name__ == "__main__":
     main()
