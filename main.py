@@ -51,15 +51,15 @@ def main():
         ##print(b)
         find_mismatch(t)
 
-    elif(text=="F"):
-        filename=input()
-        file=open(filename,"r")
-        find_mismatch(file.read())
-        file.close()
+    # elif(text=="F"):
+        
+    #     file=open(text,"r")
+    #     find_mismatch(file.read())
+    #     file.close()
     
-    elif(text.startswith("I")):
-        spl=text.split()
-        find_mismatch(spl.pop())
+    # elif(text.startswith("I")):
+    #     spl=text.split()
+    #     find_mismatch(spl.pop())
     
     elif(text.startswith("F")):
         spl=text.split()
