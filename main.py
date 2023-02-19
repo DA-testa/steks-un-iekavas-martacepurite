@@ -39,28 +39,21 @@ def find_mismatch(text):
 def main():
 
     text=input()
+    t=input()
+
+    # if(text.startswith("I")):
+    # ##if(text.startswith("I")):
+
+    #     find_mismatch(text)
+
+    # find_mismatch(t)
     
-
-    ##print(text)
-
-    if(text=="I"):
-        t=input()
-        ##print(b)
+    if(text.startswith("F")):
+        filename=input()
+        file=open(filename,"r")
+        find_mismatch(file.read())
+    else:
         find_mismatch(t)
-    
-    elif(text.startswith("I")):
-        spl=text.splitlines()
-        find_mismatch(spl.pop())
-
-    elif(text=="F"):
-        t=input()
-        file=open(t,"r")
-        find_mismatch(file)
-    
-    elif(text.startswith("F")):
-        spl=text.splitlines()
-        file=open(spl.pop(),"r")
-        find_mismatch(file)
 
 if __name__ == "__main__":
     main()
