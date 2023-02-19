@@ -49,7 +49,7 @@ def main():
         find_mismatch(t)
     
     elif(text.startswith("I")):
-        spl=text.split()
+        spl=text.splitlines()
         find_mismatch(spl.pop())
 
     elif(text=="F"):
@@ -58,7 +58,7 @@ def main():
         find_mismatch(file)
     
     elif(text.startswith("F")):
-        spl=text.split()
+        spl=text.splitlines()
         file=open(spl.pop(),"r")
         find_mismatch(file)
 
