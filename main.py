@@ -48,14 +48,19 @@ def main():
         ##print(b)
         find_mismatch(t)
     
-    if(text.startswith("I")):
+    elif(text.startswith("I")):
         spl=text.split()
         find_mismatch(spl.pop())
 
-    # if(text=="F"):
-    #     t=input()
-    #     file=open(t,"r")
-    #     find_mismatch(file)
+    elif(text=="F"):
+        t=input()
+        file=open(t,"r")
+        find_mismatch(file)
+    
+    elif(text.startswith("F")):
+        spl=text.split()
+        file=open(spl.pop(),"r")
+        find_mismatch(file)
 
 if __name__ == "__main__":
     main()
