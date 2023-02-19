@@ -43,10 +43,10 @@ def main():
 
     ##print(text)
 
-    if(text.startswith("I")):
-        spl=text.split()
+    if(text=="I"):
+        t=input()
         ##print(b)
-        find_mismatch(spl.pop())
+        find_mismatch(t)
 
     if(text.startswith("F")):
         spl=text.splitlines()
